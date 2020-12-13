@@ -22,7 +22,7 @@ function Shop() {
   return (
     <div>
         {items.map(item => (
-          <h1> {items.devName} </h1>
+          <h1> {items.devName}</h1>
         ))}
     </div>
   );
