@@ -1,10 +1,29 @@
-import react from 'react';
+import react, {useState, useEffect} from 'react';
 import './App.css';
 
 function Shop() {
+
+  useEffect(() => {
+      fetchItems();
+  },[]);
+
+  const [items, setItems] = useState([]);
+
+  const fetchItems = async () => {
+    const data = await fetch(
+        'https://fortnite-api.com/v2/shop/br'
+    );
+    
+    const items = await data.json();
+    console.log(items.data.daily.entries);
+    setItems(items.data.daily.entries);
+  };
+
   return (
     <div>
-        <h1>Shop Page</h1>
+        {items.map(item => (
+          <h1> {items.devName} </h1>
+        ))}
     </div>
   );
 }
