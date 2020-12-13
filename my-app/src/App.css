@@ -11,6 +11,24 @@ nav{
   color: white;
 }
 
+.shop{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.shop-item{
+  margin: 10px 0;
+  background-color: black;
+  width: 500px;
+}
+
+.shop-item h1{
+  color: white;
+}
+
 .nav-links{
   width: 40%;
   display: flex;
